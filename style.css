@@ -74,6 +74,12 @@ nav {
   align-items: flex-end;
 }
 
+@media (max-width: 1000px) {
+  .nav-top-right {
+    display: none;
+  }
+}
+
 .nav-top-right .links {
   position: relative;
   display: flex;
