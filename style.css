@@ -1,0 +1,466 @@
+@font-face {
+  font-family: "Azote";
+  src:
+    url("./fonts/Azote-Regular4.woff") format("woff"),
+    url("./fonts/Azote-Regular4.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+nav {
+  position: relative;
+  width: 100vw;
+}
+
+.nav-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+
+  background-color: rgb(0, 59, 31);
+
+  padding: 2rem 2rem 2.5rem 2rem;
+}
+
+.nav-top {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.nav-top-left {
+  position: relative;
+  width: 20%;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.nav-top-left .logo {
+  display: flex;
+  align-items: flex-end;
+}
+
+.nav-top-left .logo img {
+  height: clamp(60px, 7vw, 150px);
+  width: auto;
+  object-fit: contain;
+}
+
+.nav-top-right {
+  position: relative;
+  width: fit-content;
+
+  display: flex;
+  align-items: flex-end;
+}
+
+.nav-top-right .links {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 0.8rem;
+  align-items: center;
+  justify-content: flex-end;
+
+  text-align: left;
+  white-space: nowrap;
+
+  padding-bottom: 10px;
+
+  color: rgb(172, 117, 45);
+}
+
+.nav-top-right .links span p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: clamp(0.5rem, 0.8vw, 0.8rem);
+
+  text-transform: uppercase;
+}
+
+.nav-bottom {
+  position: relative;
+  width: 100%;
+}
+
+.nav-bottom .line {
+  position: relative;
+  width: 100%;
+  height: 1px;
+
+  background-color: rgb(172, 117, 45);
+}
+
+.hero {
+  position: relative;
+  width: 100vw;
+  height: 80vh;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.restaurant-section {
+  position: relative;
+  width: 100vw;
+  height: fit-content;
+
+  background-color: rgb(0, 59, 31);
+}
+
+.restaurant-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 4rem;
+  gap: 2rem;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 1000px) {
+  .restaurant-wrapper {
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  .restaurant-left {
+    width: 100% !important;
+  }
+
+  .restaurant-right {
+    width: 100% !important;
+  }
+
+  .restaurant-left .content h1 {
+    font-size: clamp(50px, 8vw, 100px) !important;
+  }
+}
+
+.restaurant-left {
+  position: relative;
+  width: 50%;
+  height: 600px;
+  min-height: 400px;
+
+  border: 2px solid rgb(195, 170, 132);
+
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 2rem;
+}
+
+.restaurant-left .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  gap: 2rem;
+}
+
+.restaurant-left .content h1 {
+  font-family: "Azote", sans-serif;
+  font-size: clamp(1.6rem, 4vw, 4.2rem);
+  font-weight: 200;
+  font-style: italic;
+
+  text-transform: uppercase;
+
+  color: white;
+}
+
+.restaurant-left .content p {
+  width: 400px;
+  font-family: "Arial", sans-serif;
+  font-size: clamp(0.8rem, 0.9vw, 1rem);
+
+  color: white;
+}
+
+.restaurant-left .hours {
+  width: 400px;
+  display: flex;
+  flex-direction: row;
+  gap: 0.8rem;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.restaurant-left .hours p {
+  font-family: "Arial", sans-serif;
+
+  white-space: nowrap;
+
+  font-size: clamp(0.8rem, 0.8vw, 1rem);
+  font-weight: 600;
+
+  color: white;
+}
+
+.restaurant-left .buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.restaurant-left .buttons button {
+  width: 200px;
+  border: 2px solid rgb(195, 170, 132);
+  background-color: transparent;
+  color: white;
+
+  padding: 0.8rem 2rem;
+
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  font-family: "Arial", sans-serif;
+  font-weight: 600;
+  color: rgb(195, 170, 132);
+}
+
+.restaurant-right {
+  position: relative;
+  width: 50%;
+  height: 600px;
+  min-height: 400px;
+
+  border: 2px solid rgb(195, 170, 132);
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  gap: 0.5rem;
+  overflow: hidden;
+}
+
+.restaurant-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.menu-section {
+  position: relative;
+  width: 100vw;
+  /* background-color: rgb(0, 59, 31); */
+  background-color: #000000;
+  padding: 6rem 2rem;
+}
+
+.menu-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://themintkentuckydowns.com/wp-content/uploads/sites/3/2025/09/Steakhouse-Web-vertical-photo.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  filter: saturate(0) blur(20px);
+  opacity: 0.15;
+}
+
+.menu-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+}
+
+.menu-wrapper > h1 {
+  font-family: "Azote", sans-serif;
+  font-size: clamp(2rem, 5vw, 5rem);
+  font-weight: 200;
+  font-style: italic;
+
+  text-transform: uppercase;
+
+  color: white;
+}
+
+.menu-types {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.menu-types button {
+  border: 2px solid rgb(195, 170, 132);
+  background-color: transparent;
+  padding: 0.75rem 2rem;
+  text-transform: uppercase;
+  font-family: "Arial", sans-serif;
+  font-weight: 600;
+  color: rgb(195, 170, 132);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.menu-types button.active,
+.menu-types button:hover {
+  background-color: rgb(195, 170, 132);
+  color: rgb(0, 59, 31);
+}
+
+.menu-pane {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.menu-pane > h2 {
+  font-family: "Azote", sans-serif;
+  font-size: clamp(1.6rem, 3.5vw, 4rem);
+  font-weight: 200;
+  font-style: italic;
+
+  text-transform: uppercase;
+
+  color: white;
+
+  text-align: center;
+  border-bottom: 1px solid rgba(195, 170, 132, 0.3);
+  padding-bottom: 1rem;
+
+  display: none;
+}
+
+.menu-subsection {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.menu-subsection h3 {
+  font-family: "Azote", sans-serif;
+  font-size: 2rem;
+  font-weight: 200;
+  color: rgb(195, 170, 132);
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  border-left: 4px solid rgb(195, 170, 132);
+  padding-left: 0.75rem;
+  padding-top: 0.75rem;
+}
+
+.menu-subsection {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem 2.5rem;
+}
+
+.menu-subsection h3 {
+  grid-column: span 2;
+}
+
+@media (max-width: 1000px) {
+  .menu-subsection {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-subsection h3 {
+    grid-column: span 1;
+  }
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px dashed rgba(195, 170, 132, 0.2);
+}
+
+.menu-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.dish-name {
+  font-family: "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: white;
+  text-transform: uppercase;
+}
+
+.dish-price {
+  font-family: "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: rgb(195, 170, 132);
+}
+
+.dish-desc {
+  font-family: "Arial", sans-serif;
+  font-weight: 300;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.4;
+}
+
+.footer {
+  position: relative;
+  width: 100vw;
+  height: fit-content;
+}
+
+.footer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
